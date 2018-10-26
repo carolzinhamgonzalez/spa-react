@@ -22,7 +22,7 @@ componentDidMount(){
       method: "get",
       headers: {'Content-Type': 'application/json'}
     };
-    console.log("HAHAHA")
+
     fetch("http://magicbox-open-api.azurewebsites.net/api/v1/cases/kinds/zika/weekTypes/epi", options)
       .then(res => res.json())
       .then(data => {objectKeys(data).forEach((week) => {
@@ -30,6 +30,24 @@ componentDidMount(){
       })
         console.log(objCountries)
       })
+
+      function cases(country){
+        let dataCountry = [];
+        for (let i in objCountries){
+          dataCountry.push(objCountries[i][country])
+        }
+
+        const result =
+          $(document).ready(function(){
+            $(dataCountry).get(-1)
+          }
+
+        return result;
+      }
+
+      const brasil = cases('bra');
+      const chile = cases('chl');
+      const bolivia = cases('bol');
 }
 
   render() {
