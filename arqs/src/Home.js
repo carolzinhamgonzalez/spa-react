@@ -1,5 +1,6 @@
 import React from 'react';
 import './Home.css';
+import { Link } from 'react-router-dom';
 import PropTypes from "prop-types";
 
 function Home (){
@@ -20,6 +21,11 @@ function Home (){
           </div>
           <div className="col ml-2" id="flags">
             <h2 className="mb-1">Veja como cada país foi afetado</h2>
+            <div class="mt-3">
+              <Link to="/bra"><img class="img-country" src="/img/bra.png"></img></Link>
+              <Link to="/chl"><img class="img-country" src="/img/chl.png"></img></Link>
+              <Link to="/bol"><img class="img-country" src="/img/bol.jpg"></img></Link>
+            </div>
             <h3 className="mt-5"><a className="link-externo" href="https://www.unicef.org/brazil/pt/activities_32722.html">Saiba como se previnir</a></h3>
           </div>
         </div>
