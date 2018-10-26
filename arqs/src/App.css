@@ -1,0 +1,24 @@
+#root{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header{
+  background-color: #192232;
+  height: 10vh;
+}
+
+.link-h1, .p-footer{
+  color: #FFFFFF;
+}
+
+.link-h1:hover{
+  color: white;
+  text-decoration: none;
+}
+
+footer{
+  background-color: #192232;
+  height: 5vh;
+}
