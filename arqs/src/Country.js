@@ -1,23 +1,35 @@
 import React, { Component } from 'react';
-// import PropTypes from "prop-types";
+import PropTypes from "prop-types";
+
+function objectKeys(data) {
+  const regex_year = new RegExp(/(2017)/g);
+  return (
+    Object.keys(data.cases).filter((value) => {
+    if (value.match(regex_year)){
+      return true
+    } else {
+      return false
+    }
+    })
+  )
+}
 
 class Country extends Component {
 
 componentDidMount(){
-    const regex_year = new RegExp(/(2017)/g);
+    const objCountries = [];
     const options = {
       method: "get",
       headers: {'Content-Type': 'application/json'}
     };
+    console.log("HAHAHA")
     fetch("http://magicbox-open-api.azurewebsites.net/api/v1/cases/kinds/zika/weekTypes/epi", options)
       .then(res => res.json())
-      .then(data => console.log((Object.keys(data.cases)).filter((value) => {
-        if (value.match(regex_year)){
-          return true
-        } else {
-          return false
-        }
-      })));
+      .then(data => {objectKeys(data).forEach((week) => {
+      objCountries.push(data.cases[week]);
+      })
+        console.log(objCountries)
+      })
 }
 
   render() {
