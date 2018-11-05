@@ -72,11 +72,12 @@ componentDidMount(){
 }
 
   render() {
+    const country = this.props.location.pathname.replace("/", "");
     return (
       <div id="mainCountry" className="container d-flex justify-content-center">
         {
           this.state.objCountries
-          ? templateCountry(cases('bra', this.state.objCountries))
+          ? templateCountry(cases(country, this.state.objCountries))
           : "carregando..."
         }
       </div>
