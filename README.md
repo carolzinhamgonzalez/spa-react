@@ -9,8 +9,8 @@ Criar uma Single Page Application fazendo uso de APIs diferentes ou adicionais v
   * **MVP:** em construção
   * **Estrutura da API:**
     Atualmente os dados disponíveis para o público incluem: população, prevalência de mosquitos, Dados do caso Paho Zika e Localização escolar e conectividade. Nesta SPA foram utilizados os dados do caso Paho Zika.
-    A API traz os dados por semanas, sendo a primeira referente a segunda quinzena de novembro de 2016 e a última referente a primeira semana de janeiro de 2018.
-
+    
+    `A API traz os dados por semanas, sendo a primeira referente a segunda quinzena de novembro de 2016 e a última referente a primeira semana de janeiro de 2018.
     Exemplo:
     "cases":{
       "2016-11-17":{
@@ -36,5 +36,5 @@ Criar uma Single Page Application fazendo uso de APIs diferentes ou adicionais v
       "2017-01-05":{...};
       "2017-12-21":{...};
       "2018-01-04":{...};
-    }
+    }`
 
