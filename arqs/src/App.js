@@ -16,8 +16,8 @@ class App extends Component {
 
           <Route path="/" exact render={Home}/>
           <Route path="/bra" component={Country}/>
-          <Route path="/chl" component={Country}/>
-          <Route path="/bol" component={Country}/>
+          <Route path="/chl" component={Home}/>
+          <Route path="/bol" component={Home}/>
 
         <footer className="d-flex justify-content-center">
           <p class="p-footer d-flex">Os dados utilizados nesta página são da equipe de ciência de dados do Escritório de Inovação da UNICEF.</p>

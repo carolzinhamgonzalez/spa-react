@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './Country.css';
 import PropTypes from "prop-types";
 
 function objectKeys(data) {
@@ -23,10 +24,9 @@ function cases(country, api){
   return result;
 }
 
-function ClickCountry(data){
+function templateCountry(data){
   return(
-    <div className="container d-flex justify-content-center">
-      <div className="row d-flex align-items-center">
+    <div className="row d-flex align-items-center col">
         <div className="col">
           <p>Segundo a Onu até o momento, 38 países e territórios confirmaram a transmissão local do vírus zika na
           Região das Américas desde 2015.</p>
@@ -41,9 +41,8 @@ function ClickCountry(data){
           <h4 className="mt-4"><a class="link-externo" href="http://www.who.int/emergencies/diseases/zika/en">Zika vírus no mundo </a></h4>
         </div>
         <div className="col">
-          <a className="link-externo" href="https://www.unicef.org/brazil/pt/activities_32722.html"><img className="img-prev" src="dist/img/prev3.png"></img></a>
+          <a className="link-externo" href="https://www.unicef.org/brazil/pt/activities_32722.html"><img className="img-prev" src="/img/prev2.png"></img></a>
         </div>
-      </div>
     </div>
   );
 }
@@ -74,12 +73,16 @@ componentDidMount(){
 
   render() {
     return (
-      <div>
-        {ClickCountry(cases('bra', this.state.objCountries))}
-
+      <div id="mainCountry" className="container d-flex justify-content-center">
+        {
+          this.state.objCountries
+          ? templateCountry(cases('bra', this.state.objCountries))
+          : "carregando..."
+        }
       </div>
     );
   }
 }
+
 
 export default Country;
