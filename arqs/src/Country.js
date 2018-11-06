@@ -38,7 +38,7 @@ function templateCountry(data){
           <p className="mb-0"> {data.confirmed_congenital} crianças que nasceram com o zika vírus</p>
           <p className="mb-0">{data.congenital_probable} casos com probabilidade de vir a nascer com o vírus. </p>
           </div>
-          <h4 className="mt-4"><a class="link-externo" href="http://www.who.int/emergencies/diseases/zika/en">Zika vírus no mundo </a></h4>
+          <h4 className="mt-4"><a class="link-externo" href="https://www.who.int/emergencies/diseases/zika/en">Zika vírus no mundo </a></h4>
         </div>
         <div className="col">
           <a className="link-externo" href="https://www.unicef.org/brazil/pt/activities_32722.html"><img className="img-prev" src="/img/prev2.png"></img></a>
@@ -62,7 +62,7 @@ componentDidMount(){
       headers: {'Content-Type': 'application/json'}
     };
 
-    fetch("http://magicbox-open-api.azurewebsites.net/api/v1/cases/kinds/zika/weekTypes/epi", options)
+    fetch("https://magicbox-open-api.azurewebsites.net/api/v1/cases/kinds/zika/weekTypes/epi", options)
       .then(res => res.json())
       .then(data => {objectKeys(data).forEach((week) => {
       objCountries.push(data.cases[week]);
