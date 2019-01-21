@@ -4,7 +4,7 @@
 
 ## Objetivo
 Criar uma Single Page Application fazendo uso de APIs diferentes ou adicionais vistas durante o bootcamp. [Veja o resultado aqui.](https://spa-react.herokuapp.com/) 
-  * **API utilizada:** Unicef
+  * **API utilizada:** Unicef.
   * **Proposta:** informar quantidade de casos de Zika vírus ocorridos em 2017 em determinado país país.
   * **MVP:** 
   
